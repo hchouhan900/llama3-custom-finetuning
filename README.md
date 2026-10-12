@@ -1,27 +1,30 @@
-# 🏫 School AI Assistant - Custom Llama-3 Fine-Tuning Pipeline
+# 🏫 School Chatbot - Llama-3 (8B) Fine-Tuning
 
-An end-to-end parameter-efficient fine-tuning (PEFT) pipeline using **Unsloth**, **LoRA**, and **Meta Llama-3 (8B)** to train a custom domain-specific chatbot for educational and school inquiry management.
-
----
-
-## 🌟 Highlights & Features
-- **4-bit Quantization:** Memory-efficient training optimized for consumer/free-tier GPUs (Google Colab T4).
-- **Parameter-Efficient Fine-Tuning (PEFT):** Utilized **LoRA (Low-Rank Adaptation)** adapters to adapt Meta's Llama-3 (8B) model to specialized school domain QA.
-- **Fast Training with Unsloth:** Achieved faster convergence and lower memory consumption during training.
-- **Interactive Chat Interface:** Deployed a web interface using **Gradio** for real-time model interaction.
+A fine-tuned **Llama-3 8B** model built using **Unsloth** to serve as an intelligent, context-aware AI assistant for school inquiries. The model is trained on a custom Q&A dataset covering admissions, fee structure, timings, facilities, and general school policies.
 
 ---
 
-## 🛠️ Tech Stack & Libraries
-- **Base Model:** Meta Llama-3 (8B / 8B-Instruct)
-- **Frameworks:** PyTorch, Hugging Face Transformers
-- **Fine-Tuning Toolkit:** Unsloth, PEFT, `bitsandbytes`, `trl`
-- **UI & Deployment:** Gradio
+## 📌 Project Overview
+
+* **Base Model:** Meta Llama-3 (8B)
+* **Framework / Libraries:** Unsloth, Hugging Face Transformers, TRL (SFTTrainer), PyTorch
+* **Fine-Tuning Technique:** QLoRA (4-bit quantization for efficient GPU memory usage)
+* **Hardware Environment:** Google Colab (Tesla T4 GPU)
+* **Dataset Size:** 40+ curated, school-specific Q&A pairs
 
 ---
 
-## 📂 Project Structure
-```text
-.
-├── school_chatbot.ipynb   # Main Google Colab Jupyter Notebook containing the full training pipeline
-└── README.md              # Project documentation
+## 🛠️ Key Features
+
+* **Custom Domain Knowledge:** Accurately answers school-related queries regarding admissions, curriculum, extra-curriculars, and administrative policies.
+* **Efficient Fine-Tuning:** Optimized using Unsloth for faster training speed and low VRAM usage.
+* **Interactive UI:** Supports inference and chat interface testing via Gradio.
+
+---
+
+## 🚀 How to Run in Google Colab
+
+1. **Clone the Repository:**
+   ```bash
+   git clone [https://github.com/hchouhan900/llama3-custom-finetuning.git](https://github.com/hchouhan900/llama3-custom-finetuning.git)
+   cd llama3-custom-finetuning
